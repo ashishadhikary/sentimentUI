@@ -127,7 +127,7 @@ APPEND_SLASH=False
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_ROOT=os.path.join(BASE_DIR, 'staticfiles')
-STATIC_URL = '/static/'
+STATIC_URL = '/build/static/'
 
 STATICFILES_DIRS=[ 
     os.path.join(BASE_DIR,'sa_interface/build/static'),
