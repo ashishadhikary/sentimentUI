@@ -14,7 +14,7 @@ def index(request):
           print("the request is in method")
      else:
           print("request not in method")
-          return render(request,"index.html")
+          return render(request,"index copy.html")
      # answer=1
      # if request.method == 'GET' and 'q' in request.GET:
      #      q=request.GET['q']
