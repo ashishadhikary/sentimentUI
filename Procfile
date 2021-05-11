@@ -1,0 +1,1 @@
+web: gunicorn react_integration.wsgi --pythonpath react_integration --log-file -
