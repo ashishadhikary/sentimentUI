@@ -10,11 +10,11 @@ def index(request):
           lis1.append(request.GET['input-form'])
           answer1=P.predict(lis1)
           print(answer1)
-          return render(request,"index.html",{'text1':answer1})  
+          return render(request,"index.html",{'text1':answer1})       
           print("the request is in method")
      else:
           print("request not in method")
-          return render(request,"index copy.html")
+          return render(request,"index.html")
      # answer=1
      # if request.method == 'GET' and 'q' in request.GET:
      #      q=request.GET['q']
