@@ -10,7 +10,7 @@ def index(request):
           lis1.append(request.GET['input-form'])
           answer1=P.predict(lis1)
           print(answer1)
-          return render(request,"index.html",{'text1':answer1})       
+          return render(request,"index.html",{'text1':answer1})  
           print("the request is in method")
      else:
           print("request not in method")

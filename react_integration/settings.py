@@ -25,15 +25,17 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = '^fsmr_6j@^w#_xmfgfue9)y#u014300dz6rr1#&(z46(a^hsk3'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['sainterface.herokuapp.com','127.0.0.1']
+
 
 
 
 # Application definition
 
 INSTALLED_APPS = [
+    'whitenoise.runserver_nostatic',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -128,6 +130,7 @@ APPEND_SLASH=False
 
 STATIC_ROOT=os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = '/static/'
+STATIC_STORAGE='whitenoise.django.GzipManifestStaticFilesStorage'
 
 STATICFILES_DIRS=[ 
     os.path.join(BASE_DIR,'sa_interface/build/static'),
