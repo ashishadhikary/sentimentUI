@@ -1,6 +1,8 @@
+from react_integration.settings import TEMPLATES
 from django.http import HttpResponse
 from django.shortcuts import render
 import joblib
+from django.template.response import TemplateResponse
 
 def index(request):
      print(request.GET)
@@ -14,7 +16,9 @@ def index(request):
           print("the request iss in method1")
      else:
           print("request not in method")
-          return render(request,"/sa_interface/public/index.html")
+          sainterface=TemplateResponse(request,'index.html',{})
+          return sainterface
+          #return render(request,"/sa_interface/build`/index.html")
      # answer=1
      # if request.method == 'GET' and 'q' in request.GET:
      #      q=request.GET['q']
