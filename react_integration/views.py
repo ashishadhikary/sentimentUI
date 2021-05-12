@@ -11,7 +11,7 @@ def index(request):
           answer1=P.predict(lis1)
           print(answer1)
           return render(request,"index.html",{'text1':answer1})  
-          print("the request is in method1")
+          print("the request iss in method1")
      else:
           print("request not in method")
           return render(request,"/sa_interface/public/index.html")
